@@ -1,0 +1,5 @@
+{
+    "api_base_url": "https://api.example.com",
+    "check_interval": 300,
+    "solana_timeout": 7200
+}
