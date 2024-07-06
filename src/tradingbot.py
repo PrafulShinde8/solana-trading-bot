@@ -37,8 +37,6 @@ class TradingBot:
 
     def buy_hero_token(self):
         self.logger.info("Buying HERO token...")
-        # Call to trading platform API to buy HERO token
-        # Example: self.api.buy_token('HERO')
 
     def wait_for_hero_purchase(self, wallet):
         self.logger.info(f"Waiting for HERO token purchase by {wallet}...")
@@ -51,13 +49,12 @@ class TradingBot:
                 if tx['token'] == 'HERO':
                     self.sell_hero_token()
                     return
-            time.sleep(60)  # Wait for 1 minute before checking again
+            time.sleep(60)  
         self.sell_hero_token()
 
     def sell_hero_token(self):
         self.logger.info("Selling HERO token...")
-        # Call to trading platform API to sell HERO token
-        # Example: self.api.sell_token('HERO')
+
 
     def run(self):
         self.logger.info("Starting trading bot...")
@@ -66,7 +63,7 @@ class TradingBot:
             filtered_wallets = self.filter_wallets(wallets)
             for wallet in filtered_wallets:
                 self.monitor_wallet_transactions(wallet)
-            time.sleep(300)  # Wait for 5 minutes before the next check
+            time.sleep(300)  
 
 if __name__ == "__main__":
     bot = TradingBot()
